@@ -33,3 +33,23 @@
     margin: 0px;
     color: #0f0f0f;
 }
+
+#formdiv > div 
+{
+    margin-left:10px;
+}
+
+#buttonlink
+{
+   
+    text-decoration: none;
+    color: black;
+   
+}
+.tab-content
+{
+    border-bottom: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    padding: 10px;
+}
