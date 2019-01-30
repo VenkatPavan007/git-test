@@ -38,15 +38,15 @@
                 </div>
         </nav>
         
-    <!-- Code for Modal-->
+    <!-- Login Modal-->
     <div class="modal fade" id="loginModal" role="dialog">
         <div class="modal-dialog modal-lg" role="content">
             <div class="modal-content">
-                <div class="modal-header">
+                <div class="modal-header" id="LoginHeader">
                     <h4 class="modal-title">Login</h4>
-                    <button role="button" class="close" data-dismiss="modal"> &times; </button>
+                    <button role="button" id="login-dismiss-cross" class="close"> &times; </button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body" id="LoginBody">
                     <form>
                         <div class="form-row">
                             <div class="form-group col-sm-4">
@@ -66,7 +66,7 @@
                             </div>
                         </div>
                         <div class="form-row">
-                            <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-secondary btn-sm ml-auto" id="login-dismiss-cancel">Cancel</button>
                             <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>        
                         </div>
                     </form>
@@ -74,15 +74,15 @@
             </div>
         </div>
     </div>
-    
+<!--    Reserve Table Modal-->
     <div class="modal fade " id="reservetable">
         <div class="modal-dialog modal-lg" role="dialog">
             <div class="modal-content">
-                <div class="modal-header">
+                <div class="modal-header" id="ReserveHeader">
                     <h4 class="mr-auto">Reserve a Table</h1>
-                    <button class="close" data-dismiss="modal">&times;</button>                    
+                    <button class="close" id="reserve-dismiss-cross">&times;</button>                    
                 </div>
-                <div class="modal-body">
+                <div class="modal-body" id="ReserveBody">
                     <form>
                         <div class="form-group row">
                             <label class="col-12 col-sm-3 col-form-label">Number of Guests</label>                  
@@ -142,7 +142,7 @@
                         
                         <div class"form-row">  
                                 
-                                <button type="button" class="btn btn-default col-12 col-sm-auto offset-sm-3" data-dismiss="modal">Cancel</button>              
+                                <button type="button" class="btn btn-default col-12 col-sm-auto offset-sm-3" id="reserve-dismiss-cancel">Cancel</button>              
                                 <button type="button" class="btn btn-primary  col-12 col-sm-auto">Reserve</button>                           
                         </div>
                             
@@ -381,6 +381,26 @@
                     $("#carouselButton").children("span").removeClass("fa-play");
                     $("#carouselButton").children("span").addClass("fa-pause");                    
                 }
+            });
+            
+            $("#login-dismiss-cancel").click(function()
+            {
+               $("#loginModal").modal('hide');
+            });
+            
+            $("#login-dismiss-cross").click(function()
+            {
+               $("#loginModal").modal('hide');
+            });
+            
+             $("#reserve-dismiss-cancel").click(function()
+            {
+               $("#reservetable").modal('hide');
+            });
+            
+             $("#reserve-dismiss-cross").click(function()
+            {
+               $("#reservetable").modal('hide');
             });
         });
     </script>
